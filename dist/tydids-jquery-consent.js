@@ -123,9 +123,9 @@ $.fn.extend({
                 a.href = url;
                 a.download = "ssi_" + revealedSSI.identity + ".html"; 
                 a.filename = "ssi_" + revealedSSI.identity + ".html";
-                a.name = "ssi_" + revealedSSI.identity + ".html";
-                a.click(); 
+                a.name = "ssi_" + revealedSSI.identity + ".html";               
                 await ssi.publish();
+                a.click(); 
                 $(parent).val(revealedSSI.identity);
                 if($(parent).attr('signature')) {
                     $('#'+$(parent).attr('signature')).val(revealedSSI.signature);
