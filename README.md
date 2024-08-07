@@ -1,12 +1,12 @@
 # tydids-jquery-consent
-**JQuery extension for TyDIDs Self-Sovereign Identity and Consent Management**
+**jQuery extension for TyDIDs Self-Sovereign Identity and Consent Management**
 
 Uses [TyDIDs-Core](https://github.com/energychain/tydids-core)
 
 ## Installation
 
 ```html
-<script src=""/>
+<script src="https://energychain.github.io/tydids-jquery-consent/dist/tydids-jquery-consent.js"/>
 ```
 
 ## Usage

@@ -1,7 +1,5 @@
 $.fn.extend({
-    tydisConsent: function(options) {
-      // Set default options
-      
+    tydisConsent: function(options) {          
       // Check if TyDIDs is already loaded (prefered!) if not load it via GitHub
       if(typeof window.TyDIDs == 'undefined') {
         $.getScript('https://energychain.github.io/tydids-core/dist/tydids.js', function() {
