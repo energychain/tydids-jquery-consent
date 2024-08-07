@@ -1,0 +1,28 @@
+{
+  "name": "tydids-jquery-consent",
+  "version": "1.0.0",
+  "description": "JQuery extension for TyDIDs Self-Sovereign Identity & Consent Management",
+  "main": "dist/tydids-jquery-consent.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energychain/tydids-jquery-consent.git"
+  },
+  "keywords": [
+    "jquery",
+    "consent",
+    "ssi",
+    "did"
+  ],
+  "author": "STROMDAO GmbH <dev@stromdao.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/energychain/tydids-jquery-consent/issues"
+  },
+  "homepage": "https://github.com/energychain/tydids-jquery-consent#readme"
+}
