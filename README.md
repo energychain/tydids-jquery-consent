@@ -1,7 +1,17 @@
 # tydids-jquery-consent
 **jQuery extension for TyDIDs Self-Sovereign Identity and Consent Management**
 
+A jQuery extension that simplifies the process of adding GDPR compliance to existing webforms. It allows web developers to easily integrate GDPR compliance into their existing forms using decentralized and self-sovereign identities. This extension solves the problem of allowing data providers (web users) to revoke consent given at a later time.
+
 Uses [TyDIDs-Core](https://github.com/energychain/tydids-core)
+
+Try on [JSFiddle](https://jsfiddle.net/stromdao/84gxfkts/1/)
+
+## Features
+- Easy to Use: tydids-jquery-consent provides a simple and intuitive API for adding GDPR compliance to your webforms.
+- Transparent Implementation: The extension generates a Self-Sovereign Identity (SSI) for each user who checks the GDPR compliance box. This SSI allows the user to revoke consent at any time.
+- No Third-Party Dependencies: tydids-jquery-consent is designed to be a standalone solution. It does not rely on any third-party frameworks or service providers.
+- Backend Compatibility: The value of the GDPR compliance checkbox is changed to the Identity of the SSI. This allows the consent to be easily validated on the backend.
 
 ## Installation
 
@@ -15,7 +25,10 @@ Uses [TyDIDs-Core](https://github.com/energychain/tydids-core)
 $('#consentCheck').tydisConsent(); // #consentCheck is ID of checkbox field for GDPR Constent
 ```
 
+This will add the necessary functionality to the checkbox. When the user checks the box, an SSI will be generated and downloaded. The value of the checkbox will be changed to the Identity of the SSI.
+
 ## Configuration
+
 ### Basic Usage
 ```html
 <input class="form-check-input" type="checkbox" id="consentCheck" name="consentCheck" required="">
