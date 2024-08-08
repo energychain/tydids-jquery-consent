@@ -21,11 +21,45 @@ Try on [JSFiddle](https://jsfiddle.net/stromdao/84gxfkts/1/)
 
 ## Usage
 
+### Getting Consent
+
 ```javascript
 $('#consentCheck').tydisConsent(); // #consentCheck is ID of checkbox field for GDPR Constent
 ```
 
 This will add the necessary functionality to the checkbox. When the user checks the box, an SSI will be generated and downloaded. The value of the checkbox will be changed to the Identity of the SSI.
+
+### Checking revocation
+
+#### CLI
+```bash
+npx tydids-core isgranted <identity>
+```
+
+#### Node JS 
+```javascript
+ const provider = new ethers.providers.JsonRpcProvider(env._RPC_URL);
+  const bn = (await provider.getBlockNumber()).toString() * 1;
+  let sc = new ethers.Contract(env._revokeContract, env._revokeAbi, provider);      
+  let rcp = await sc.revocations(identity);
+  let ts =  rcp.toString() * 1;   
+  console.log("isGranted("+identity+")@Consensus:"+bn); 
+  if(ts > 0) {
+    console.log("Revoked at "+new Date(ts*1000).toISOString());
+    process.exit(1);
+  } else {
+    sc = new ethers.Contract(env._publishContract, env._publishAbi, provider);      
+    rcp = await sc.publishs(identity);
+    ts =  rcp.toString() * 1;    
+    console.log("Granted at "+new Date(ts*1000).toISOString());
+    process.exit(0);
+  }
+```
+
+#### Rest API
+```
+https://api.corrently.io/v2.0/tydids/status?identity=<identity>
+```
 
 ## Configuration
 
