@@ -56,6 +56,8 @@ npx tydids-core isgranted <identity>
   }
 ```
 
+For details check [TyDIDs-Core](https://github.com/energychain/tydids-core)
+
 #### Rest API
 ```
 https://api.corrently.io/v2.0/tydids/status?identity=<identity>

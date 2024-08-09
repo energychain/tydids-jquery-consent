@@ -33,8 +33,8 @@ $.fn.extend({
 
             const payload = captureFormFields();
             const ssi = new window.TyDIDs.DecentralizedIdentityConsent(payload);
-            const signAndDownload = async function() {                
-                //const lib = await (await fetch("/tydids.js")).text();;
+            const signAndDownload = async function() {                                
+                await ssi.publish(); // Needs to be published before reveal - due to imudability
                 const revealedSSI = await ssi.reveal();
                 $('#hiddenSignature').val(revealedSSI.signature);
     
@@ -124,7 +124,7 @@ $.fn.extend({
                 a.download = "ssi_" + revealedSSI.identity + ".html"; 
                 a.filename = "ssi_" + revealedSSI.identity + ".html";
                 a.name = "ssi_" + revealedSSI.identity + ".html";               
-                await ssi.publish();
+               
                 a.click(); 
                 $(parent).val(revealedSSI.identity);
                 if($(parent).attr('signature')) {
