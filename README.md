@@ -3,7 +3,7 @@
 
 A jQuery extension that simplifies the process of adding GDPR compliance to existing webforms. It allows web developers to easily integrate GDPR compliance into their existing forms using decentralized and self-sovereign identities. This extension solves the problem of allowing data providers (web users) to revoke consent given at a later time.
 
-Uses [TyDIDs-Core](https://github.com/energychain/tydids-core)
+Uses [TyDIDs-Core](https://github.com/energychain/tydids-core). Backend/Middleware: [TyDIDs-SSI-Consent-Router](https://github.com/energychain/tydids-ssi-consent-router)
 
 Try on [JSFiddle](https://jsfiddle.net/stromdao/84gxfkts/1/)
 

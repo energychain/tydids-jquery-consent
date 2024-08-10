@@ -1,6 +1,6 @@
 {
   "name": "tydids-jquery-consent",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JQuery extension for TyDIDs Self-Sovereign Identity & Consent Management",
   "main": "dist/tydids-jquery-consent.js",
   "directories": {
